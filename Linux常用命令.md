@@ -1,4 +1,4 @@
-#nohup 
+# nohup 
 
 ```bash
 nohup command_line &
@@ -11,14 +11,14 @@ nohup command_line > output 2>&1 &
 
 将stdout重定向到output文件中，并将stderr重定向到stdout中，其实也就是重定向到output文件中
 
-#tailf
+# tailf
 
 ```bash
 tailf filename
 ```
 将文件的最后10行打印出来，会随着文件的增长不断打印添加的内容，非常适合log的跟踪
 
-#ps
+# ps
 
 查看进程，常用组合就几个，其他选择查看man
 
@@ -32,7 +32,7 @@ ps -ef
 ```
 列出所有进程，包含父进程和子进程的关系、最近CPU使用、进程开始时间、终端名以及相关的命令语句
 
-#lsof
+# lsof
 
 是list open files的缩写
 
@@ -42,7 +42,7 @@ lsof -i:1234
 可以查出哪个进程在占用1234这个端口
 
 
-#ifconfig
+# ifconfig
 
 mac下可用该命令组合其他命令获得本机ip地址，首先执行ifconfig,然后我们感兴趣的一段是这样的
 
@@ -61,21 +61,21 @@ en0: flags=8863<UP,BROADCAST,SMART,RUNNING,SIMPLEX,MULTICAST> mtu 1500
 ifconfig | grep 'inet.*netmask.*broadcast' | awk '{print $2}'
 ```
 
-#kill
+# kill
 
 ```bash
 kill -9 pid
 ```
 强制结束id为pid的进程
 
-#ln
+# ln
 
 ```bash
 ln -s source target
 ```
 创建软链接，source和target可为文件或目录，相当于Windows里的快捷方式
 
-#which
+# which
 
 ```bash
 which file
@@ -84,7 +84,7 @@ which file
 
 PS:如果相同文件名的可执行文件在PATH里存在多个路径，PATH在查找的时候以顺序优先去匹配，配在越前面的路径优先级越高
 
-#chmod
+# chmod
 
 ```bash
 chmod u+x hello.sh
@@ -92,7 +92,7 @@ chmod u+x hello.sh
 为当前用户添加脚本的可执行权限，其中u可替换为g代表当前用户组，a代表所有人。
 +表示添加，-表示删除。x,r,w分别对应执行，读，写
 
-#grep
+# grep
 这个命令非常强大，用到就写一点
 
 ```bash
@@ -109,7 +109,7 @@ grep [-acinv] [--color=auto] 'str-to-find' filename
 -v:反向选择
 ```
 
-#sort
+# sort
 排序
 
 ```bash
@@ -130,7 +130,7 @@ cat /etc/passwd | sort -t ':' -k 3 -n
 ```
 以冒号分隔后第三列并以数字形式排序
 
-#uniq
+# uniq
 去重
 
 ```bash
@@ -139,7 +139,7 @@ uniq [-ic]
 -c:进行计数
 ```
 
-#wc
+# wc
 统计行或单词、字符数量
 
 ```bash
@@ -149,7 +149,7 @@ wc [-lwm]
 -m:列出字符数
 ```
 
-#cut
+# cut
 类似split功能
 
 ```bash
@@ -164,14 +164,14 @@ export | cut -c 12-
 
 cut命令在处理多空格相连的数据时不好用
 
-#scp
+# scp
 在两个host之间传输文件
 
 ```bash
 scp source_file_in_local user@host:save_to_path
 ```
 
-#less
+# less
 查看文件的一种方式
 
 ```bash
@@ -184,22 +184,22 @@ q:退出
 ```
 很多vim的命令也可以用
 
-#md5sum
+# md5sum
 查看文件的MD5值
 
 ```bash
 md5sum filename
 ```
 
-#man ascii
+# man ascii
 
 查看所有ascii码，方便查阅
 
-#Ctrl+C
+# Ctrl+C
 结束当前进程，不可恢复
 
-#Ctrl+Z
+# Ctrl+Z
 暂停当前进程，可以恢复
 
-#Ctrl+U
+# Ctrl+U
 删除当前命令输入
