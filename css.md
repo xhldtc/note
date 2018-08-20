@@ -6,7 +6,7 @@
 
 ```
 table, td {
-	border-collapse: collapse;
+    border-collapse: collapse;
 }
 
 ```
@@ -15,8 +15,8 @@ table, td {
 
 ```
 span {
-	display: inline-block;
-	vertical-align: middle;
+    display: inline-block;
+    vertical-align: middle;
 }
 ```
 
